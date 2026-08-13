@@ -43,7 +43,6 @@ The first element is just for naming, and is completely ignored.
 
 Splits when an item matching the ID enters your inventory for the first time.
 If a quantity is given, it will split when you first have that many of the item in your inventory.
-You can find item IDs at https://www.osrsbox.com/tools/item-search/
 
 `<name>,1,<varb>,<value>`
 
