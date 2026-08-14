@@ -37,23 +37,25 @@ Make sure you have `Compare Against > Game Time` selected on LiveSplit, or the t
 Open the plugin config to modify what events the plugin will split on.
 The first element is just for naming, and is completely ignored.
 
-### Format:
+### Format
 
 `<name>,0,<itemID>(,<quantity>)`
 
 Splits when an item matching the ID enters your inventory for the first time.
 If a quantity is given, it will split when you first have that many of the item in your inventory.
 
+> You can find item IDs on the [OSRS Wiki Item IDs page](https://oldschool.runescape.wiki/w/Item_IDs).
+
 `<name>,1,<varb>,<value>`
 
-Splits when the varbit changes to that value for the first time.
+Splits when the varbit (`varb`) changes to that value for the first time.
 
 `<name>,2,<varp>,<value>`
 
-Splits when the varplayer changes to that value for the first time.
+Splits when the varplayer (`varp`) changes to that value for the first time.
 
-You can find varbs and varps using RuneLite's developer mode's Var Inspector https://github.com/runelite/runelite/wiki/Using-the-client-developer-tools
+> See the OSRS Wiki references for [varbits](https://oldschool.runescape.wiki/w/RuneScape:Varbit) and [varplayers](https://oldschool.runescape.wiki/w/RuneScape:Varplayer), or use RuneLite’s Var Inspector after enabling [developer mode](https://github.com/runelite/runelite/wiki/Using-the-client-developer-tools).
 
 ---
 
-Want to use this plugin but need help? Ask Muffyn#0971 or https://discord.gg/m3AaNEWJax . I love speedrunning and want this tool to be as convenient as possible for anybody who wants to try :)
+Want to use this plugin but need help? Ask Muffyn#0971 or https://discord.gg/m3AaNEWJax. I love speedrunning and want this tool to be as convenient as possible for anybody who wants to try :)
