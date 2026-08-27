@@ -57,6 +57,7 @@ public class QSRAutoSplitterPlugin extends Plugin
 	// is the timer running?
 	private boolean started = false;
 	private boolean paused = false;
+	private int initializeTimer = 2;
 
 	private List<Pair<Integer, Integer>> itemList;
 	private List<Pair<Integer, Integer>> varbList;
@@ -130,6 +131,10 @@ public class QSRAutoSplitterPlugin extends Plugin
 	}
 	@Subscribe
 	public void onGameTick(GameTick event) {
+		if (initializeTimer > 0) {
+			initializeTimer--;
+			return;
+		}
 		if (!started && isInSpeedrun()) {
 			started = true;
 			sendMessage("reset");
@@ -197,6 +202,9 @@ public class QSRAutoSplitterPlugin extends Plugin
 
 	@Subscribe
 	private void onGameStateChanged(GameStateChanged event) {
+		if (event.getGameState() == GameState.LOGGING_IN || event.getGameState() == GameState.HOPPING) {
+			initializeTimer = 2;
+		}
 		if (started) {
 			if (event.getGameState() == GameState.LOADING ||
 					event.getGameState() == GameState.LOGGED_IN ||
